@@ -1,2 +1,2 @@
 # Aurora Tasks
-A small taks management web app
+A small task management web app
