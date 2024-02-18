@@ -3,11 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css">
+    <!-- Noto sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aurora Tasks</title>
   </head>
   <body>
-    <h1>Aurora Tasks</h1>
+    <div id="outer-container">
+      <header>
+        <h1>Aurora Tasks</h1>
+      </header>
+      <div id="inner-container">
+        <div id="side-bar">
+          <div id="side-bar-content">
+            <h2>Sidebar</p>
+              <ul id="side-bar-list">
+                <li>⭐ Dummy</li>
+                <li>🗓️ Dummy</li>
+                <li>📒 Dummy</li>
+              </ul>
+          </div>
+        </div>
+        <div id="main-content"></div>
+      </div>
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
