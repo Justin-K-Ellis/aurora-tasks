@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Custom stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form-styles.css">
     <!-- Noto sans font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +15,9 @@
   </head>
   <body>
     <div id="outer-container">
-      <header>
-        <h1>Aurora Tasks</h1>
-      </header>
       <div id="inner-container">
+
+        <!-- Sidebar -->
         <div id="side-bar">
           <div id="side-bar-content">
             <h2>Sidebar</p>
@@ -27,7 +28,21 @@
               </ul>
           </div>
         </div>
-        <div id="main-content"></div>
+
+        <!-- Title -->
+        <div id="title-space">
+          <h1>Aurora Tasks</h1>
+        </div>
+
+        <!-- Form -->
+        <form>
+          <input type="text" id="form-task" name="form-task" placeholder="Task">
+          <input type="text" id="form-description" name="form-description" placeholder="Description">
+          <div class="date-and-submit">
+            <input type="date" id="form-date" name="form-date">
+            <button type="submit">Add</button>
+          </div>
+        </form>
       </div>
     </div>
 

@@ -1,0 +1,17 @@
+form {
+    grid-column: 5 / 11;
+    grid-row: 2 / 4;
+
+    border: 2px solid var(--my-gray);
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+form .date-and-submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
