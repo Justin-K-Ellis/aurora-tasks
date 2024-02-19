@@ -1,0 +1,6 @@
+.task-list {
+    grid-column: 5 / 10;
+    grid-row: 4 / 12;
+    border: 1px solid black;
+    margin-top: 1rem;
+}

@@ -22,3 +22,19 @@ input {
     border: none;
     outline: none;
 }
+
+input:hover {
+    font-weight: 800;
+}
+
+button {
+    background-color: var(--my-blue);
+    border-radius: 10%;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--my-orange);
+}

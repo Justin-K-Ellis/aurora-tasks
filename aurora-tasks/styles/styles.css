@@ -26,7 +26,6 @@ header {
   grid-row: 1 / 2;
   justify-items: center;
   background-color: white;
-  /* border: var(--dev-border); */
 }
 
 #inner-container {
