@@ -11,7 +11,7 @@
     // the task object in the list.
 
 function getTasks(cssClass) {
-    let paras = document.querySelectorAll(cssClass);  // For some reason, this is returning an empty node list
+    let paras = document.querySelectorAll(cssClass); 
     return paras;
 }
 

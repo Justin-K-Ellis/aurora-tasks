@@ -1,6 +1,32 @@
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
 .task-list {
-    grid-column: 5 / 10;
+    grid-column: 5 / 11;
     grid-row: 4 / 12;
-    border: 1px solid black;
+    border: 2px solid var(--my-gray);
+    border-radius: 1rem;
+
+    padding: 1rem;
     margin-top: 1rem;
+}
+
+.task-title {
+    font-weight: 500;
+}
+
+.task-description {
+    font-weight: 300;
+}
+
+.task-date {
+    margin-top: 0.5rem;
 }

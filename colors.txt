@@ -1,0 +1,6 @@
+Main colors:
+#E95420 (Ubuntu orange)
+#2050e9 (contrast with orange)
+
+Detail:
+#20e9b9 (teal)

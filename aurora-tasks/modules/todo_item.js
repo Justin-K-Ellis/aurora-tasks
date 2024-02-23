@@ -1,10 +1,8 @@
 // Factory function to make todo items
 
-// TODO: add remaining parameters
-
-const makeTodo = (title, description) => {
-    let checked = false;
-    return { title, description, checked};
+const makeTodo = (title, description, date) => {
+    let done = false;
+    return { title, description, date, done};
 }
 
 export default makeTodo;

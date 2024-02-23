@@ -11,3 +11,5 @@ function makeTaskLibrary() {
 
     return { taskArray, deleteTask }
 }
+
+export default makeTaskLibrary;
