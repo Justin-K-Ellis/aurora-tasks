@@ -1,15 +1,16 @@
 // Factory functiom to create an object ("library") to store tasks to 
 // be rendered to the DOM.
 
-function makeTaskLibrary() {
-    let taskArray = [];
+class Library {
+    taskArray = [];
 
-    // TODO: method to delete tasks
-    const deleteTask = () => {
-        console.log("todo");
+    addTask = (task) => {
+        this.taskArray.push(task);
     }
 
-    return { taskArray, deleteTask }
+    deleteTask = (index) => {
+        this.taskArray.splice(index, 1);
+    }
 }
 
-export default makeTaskLibrary;
+export default Library;
