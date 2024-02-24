@@ -1,3 +1,4 @@
+import displayList from "./modules/displayList";
 import makeListElement from "./modules/listElements";
 import Library from "./modules/taskLibrary";
 import makeTask from "./modules/taskItem";
@@ -6,7 +7,7 @@ import { getTasks, strikeTasks } from "./modules/checkTask";
 
 let taskForm = document.querySelector(".task-form");
 let DOMtaskList = document.querySelector(".task-list");
-let taskLibrary = new Library();
+let taskLibrary = new Library;
 
 
 function handleForm(event) {
@@ -15,19 +16,19 @@ function handleForm(event) {
   const title = formData.get("form-title");
   const description = formData.get("form-description");
   const date = formData.get("form-date");
-
   const taskObj = makeTask(title, description, date);
   taskLibrary.addTask(taskObj);
-  removeAllChildNodes(DOMtaskList);
-  displayList(taskLibrary.taskArray);
+  displayList(taskLibrary, taskLibrary.taskArray, DOMtaskList);
 }
 
-function displayList(taskList) {
-  for (let task of taskList) {
-    const taskElement = new makeListElement(task, taskLibrary);
-    DOMtaskList.appendChild(taskElement);
-  }
-}
+
+// function displayList(taskList) {
+//   removeAllChildNodes(DOMtaskList);
+//   for (let task of taskList) {
+//     const taskElement = makeListElement(task, taskLibrary);
+//     DOMtaskList.appendChild(taskElement);
+//   }
+// }
 
 
 taskForm.addEventListener("submit", handleForm);
