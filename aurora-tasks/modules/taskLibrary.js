@@ -1,4 +1,4 @@
-// Factory functiom to create an object ("library") to store tasks to 
+// Class to create an object ("library") to store tasks to 
 // be rendered to the DOM.
 
 class Library {
