@@ -22,13 +22,4 @@ function handleForm(event) {
 }
 
 
-// function displayList(taskList) {
-//   removeAllChildNodes(DOMtaskList);
-//   for (let task of taskList) {
-//     const taskElement = makeListElement(task, taskLibrary);
-//     DOMtaskList.appendChild(taskElement);
-//   }
-// }
-
-
 taskForm.addEventListener("submit", handleForm);
