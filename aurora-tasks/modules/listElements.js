@@ -41,6 +41,19 @@ function makeListElement(task, taskLibrary, DOMtaskList) {
     li.appendChild(hr);
     li.setAttribute("data-index", index);
 
+    // Check/done status logic
+    li.addEventListener("click", () => {
+        task.toggleDoneStatus();
+        if (task.done === true) {
+            li.classList.add("done-task");
+        }
+        else {
+            li.classList.remove("done-task");
+        }
+    })
+    
+    task.done === true ? li.classList.add("done-task") : li.classList.remove("done-task");
+    
     return li;
 }
 

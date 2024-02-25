@@ -1,8 +1,17 @@
-// Factory function to make todo items
+// Class to make task items
 
-const makeTask = (title, description, date) => {
-    let done = false;
-    return { title, description, date, done};
+class Task {
+    constructor(title, description, date) {
+        this.title = title;
+        this.description = description;
+        this.date = date;
+    }
+
+    done = false;
+
+    toggleDoneStatus() {
+        this.done === false ? this.done = true : this.done = false;
+    }
 }
 
-export default makeTask;
+export default Task;

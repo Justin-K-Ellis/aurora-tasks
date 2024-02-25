@@ -1,9 +1,6 @@
 import displayList from "./modules/displayList";
-import makeListElement from "./modules/listElements";
 import Library from "./modules/taskLibrary";
-import makeTask from "./modules/taskItem";
-import removeAllChildNodes from "./modules/remove_all_childen";
-import { getTasks, strikeTasks } from "./modules/checkTask";
+import Task from "./modules/taskItem";
 
 let taskForm = document.querySelector(".task-form");
 let DOMtaskList = document.querySelector(".task-list");
@@ -16,7 +13,7 @@ function handleForm(event) {
   const title = formData.get("form-title");
   const description = formData.get("form-description");
   const date = formData.get("form-date");
-  const taskObj = makeTask(title, description, date);
+  let taskObj = new Task(title, description, date);
   taskLibrary.addTask(taskObj);
   displayList(taskLibrary, taskLibrary.taskArray, DOMtaskList);
 }
