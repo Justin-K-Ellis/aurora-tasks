@@ -4,6 +4,7 @@
   --my-blue: #2050e9;
   --my-teal: #20e9b9;
   --my-gray: #eeeded;
+  --my-dark-gray: #818181;
 }
 
 
@@ -44,6 +45,8 @@ header {
 
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
+
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 #side-bar {
