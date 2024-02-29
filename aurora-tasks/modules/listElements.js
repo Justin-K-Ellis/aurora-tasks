@@ -3,6 +3,10 @@ import displayList from "./displayList";
 function makeListElement(task, taskLibrary, DOMtaskList) {
     // Create elements
     let li = document.createElement("li");
+    let taskWrapper = document.createElement("div");
+    let p = document.createElement("p");
+    let checkCircle = document.createElement("i");
+    let taskContent = document.createElement("div");
     let taskTitle = document.createElement("div");
     let taskDescription = document.createElement("div");
     let dateAndDelete = document.createElement("div");
@@ -13,6 +17,10 @@ function makeListElement(task, taskLibrary, DOMtaskList) {
     const index = taskLibrary.taskArray.indexOf(task);
 
     // Add classes
+    taskWrapper.classList.add("task-wrapper");
+    checkCircle.classList.add("bi");
+    checkCircle.classList.add("bi-circle");
+    taskContent.classList.add("task-content");
     taskTitle.classList.add("task-title");
     taskDescription.classList.add("task-description");
     taskDate.classList.add("task-date");
@@ -33,11 +41,15 @@ function makeListElement(task, taskLibrary, DOMtaskList) {
     })
    
     // Append
-    li.appendChild(taskTitle);
-    li.appendChild(taskDescription);
+    p.appendChild(checkCircle);
+    taskWrapper.appendChild(p);
+    taskContent.appendChild(taskTitle)
+    taskContent.appendChild(taskDescription);
     dateAndDelete.appendChild(taskDate);
     dateAndDelete.appendChild(deleteButton);
-    li.appendChild(dateAndDelete);
+    taskContent.appendChild(dateAndDelete);
+    taskWrapper.appendChild(taskContent);
+    li.appendChild(taskWrapper);
     li.appendChild(hr);
     li.setAttribute("data-index", index);
 
@@ -46,13 +58,23 @@ function makeListElement(task, taskLibrary, DOMtaskList) {
         task.toggleDoneStatus();
         if (task.done === true) {
             li.classList.add("done-task");
+            p.innerHTML = '<i class="bi bi-check2-circle"></i>';
+
         }
         else {
             li.classList.remove("done-task");
         }
     })
     
-    task.done === true ? li.classList.add("done-task") : li.classList.remove("done-task");
+    if (task.done) {
+        li.classList.add("done-task");
+        p.innerHTML = '<i class="bi bi-check2-circle"></i>';
+    }
+    else {
+        li.classList.remove("done-task");
+    }
+
+    // task.done === true ? li.classList.add("done-task") : li.classList.remove("done-task");
     
     return li;
 }
