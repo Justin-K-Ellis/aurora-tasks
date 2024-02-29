@@ -63,6 +63,7 @@ function makeListElement(task, taskLibrary, DOMtaskList) {
         }
         else {
             li.classList.remove("done-task");
+            p.innerHTML = '<i class="bi bi-circle"></i>';
         }
     })
     
@@ -72,6 +73,7 @@ function makeListElement(task, taskLibrary, DOMtaskList) {
     }
     else {
         li.classList.remove("done-task");
+        p.innerHTML = '<i class="bi bi-circle"></i>';
     }
 
     // task.done === true ? li.classList.add("done-task") : li.classList.remove("done-task");
