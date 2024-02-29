@@ -25,8 +25,14 @@ li {
 }
 
 .task-wrapper {
+    padding: 0.5rem;
     display: flex;
     flex-direction: row;
+    border-radius: 1rem;
+}
+
+.task-wrapper:hover {
+    background: linear-gradient(90deg, var(--my-gray), white);
 }
 
 .task-wrapper p {
