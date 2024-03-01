@@ -2,7 +2,6 @@ import clearAll from "./modules/clearAll";
 import displayList from "./modules/displayList";
 import Library from "./modules/taskLibrary";
 import Task from "./modules/taskItem";
-import { l } from "vite/dist/node/types.d-jgA8ss1A";
 
 let taskForm = document.querySelector(".task-form");
 let DOMtaskList = document.querySelector(".task-list");
