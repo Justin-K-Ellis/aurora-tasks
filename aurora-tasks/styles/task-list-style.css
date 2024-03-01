@@ -16,7 +16,7 @@ li {
 
 .task-list {
     grid-column: 5 / 11;
-    grid-row: 4 / 12;
+    grid-row: 5 / 12;
     border: 2px solid var(--my-gray);
     border-radius: 1rem;
 

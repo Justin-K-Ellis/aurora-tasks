@@ -1,9 +1,10 @@
 // Class to make task items
 
 class Task {
-    constructor(title, description, date) {
+    constructor(title, description, projectList, date) {
         this.title = title;
         this.description = description;
+        this.projectList = projectList;
         this.date = date;
     }
 

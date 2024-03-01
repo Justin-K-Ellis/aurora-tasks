@@ -22,11 +22,12 @@
         <!-- Sidebar -->
         <div id="side-bar">
           <div id="side-bar-content">
-            <h2>Sidebar</p>
+            <h2>Task Lists</p>
               <ul id="side-bar-list">
-                <li>⭐ Dummy</li>
-                <li>🗓️ Dummy</li>
-                <li>📒 Dummy</li>
+                <li>⭐ All</li>
+                <li id="work-link">🏢 Work</li>
+                <li id="shopping-link">🛍️ Shopping</li>
+                <li id="hobbies-link">😃 Hobbies</li>
               </ul>
           </div>
         </div>
@@ -40,6 +41,12 @@
         <form class="task-form">
           <input type="text" id="form-title" name="form-title" placeholder="Task">
           <input type="text" id="form-description" name="form-description" placeholder="Description">
+          <label for="project-list">List:</label>
+          <select name="project-list" id="project-list">
+            <option value="work">Work</option>
+            <option value="shopping">Shopping</option>
+            <option value="hobbies">Hobbies</option>
+          </select>
           <div class="date-and-submit">
             <input type="date" id="form-date" name="form-date">
             <button type="submit">Add</button>

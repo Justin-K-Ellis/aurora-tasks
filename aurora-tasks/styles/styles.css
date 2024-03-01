@@ -72,12 +72,13 @@ header {
 }
 
 #side-bar-list li {
-  padding-bottom: 1em;
+  padding: 0.5em;
 }
 
 #side-bar-list li:hover {
   color: var(--my-blue);
-  font-size: 1.05em;
+  border: 1px solid var(--my-orange);
+  border-radius: 1rem;
 }
 
 #title-space {
