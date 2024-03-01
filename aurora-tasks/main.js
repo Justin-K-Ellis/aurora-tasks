@@ -1,14 +1,19 @@
 import clearAll from "./modules/clearAll";
 import displayList from "./modules/displayList";
+import displayAllProjects from "./modules/displayAllProjects";
 import Library from "./modules/taskLibrary";
+import removeAllChildNodes from "./modules/remove_all_childen";
 import Task from "./modules/taskItem";
 
 let taskForm = document.querySelector(".task-form");
 let DOMtaskList = document.querySelector(".task-list");
+
 let workLibrary = new Library;
 let shoppingLibrary = new Library;
 let hobbieLibrary = new Library;
+let allLibraries = [workLibrary, shoppingLibrary, hobbieLibrary];
 
+const allLink = document.querySelector("#all-link");
 const workLink = document.querySelector("#work-link");
 const shoppingLink =  document.querySelector("#shopping-link");
 const hobbiesLink = document.querySelector("#hobbies-link");
@@ -38,11 +43,16 @@ function handleForm(event) {
   }
   // taskLibrary.addTask(taskObj);
   // displayList(taskLibrary, taskLibrary.taskArray, DOMtaskList);
-  displayAllProjects();
+  displayAllProjects(allLibraries, DOMtaskList);
   clearAll(formInputs);
 }
 
 taskForm.addEventListener("submit", handleForm);
+
+allLink.addEventListener("click", () => {
+  removeAllChildNodes(DOMtaskList);
+  displayAllProjects(allLibraries, DOMtaskList);
+})
 
 workLink.addEventListener("click", () => {
   displayProject(workLibrary);
@@ -57,12 +67,12 @@ hobbiesLink.addEventListener("click", () => {
 })
 
 function displayProject(projectLibrary) {
-  clearAll(formInputs);
+  // clearAll(formInputs);
   displayList(projectLibrary, projectLibrary.taskArray, DOMtaskList);
 }
 
-function displayAllProjects() {
-  displayProject(workLibrary);
-  displayProject(shoppingLibrary);
-  displayProject(hobbieLibrary);
-}
+// function displayAllProjects() {
+//   displayProject(workLibrary);
+//   displayProject(shoppingLibrary);
+//   displayProject(hobbieLibrary);
+// }
