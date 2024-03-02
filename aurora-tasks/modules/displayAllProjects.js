@@ -1,7 +1,9 @@
 import makeListElement from "./listElements";
+import removeAllChildNodes from "./remove_all_childen";
 
 function displayAllProjects(projectList, DOMtaskList) {
-    console.log(typeof projectList);  // For debug
+    console.log(`${projectList} is ${typeof projectList}`);  // For debug
+    removeAllChildNodes(DOMtaskList);
     for (let taskLibrary of projectList) {
         displayListFull(taskLibrary, taskLibrary.taskArray, DOMtaskList);
     }

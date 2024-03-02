@@ -41,8 +41,7 @@ function handleForm(event) {
   else if (taskObj.projectList === "hobbies") {
     hobbieLibrary.addTask(taskObj);
   }
-  // taskLibrary.addTask(taskObj);
-  // displayList(taskLibrary, taskLibrary.taskArray, DOMtaskList);
+
   displayAllProjects(allLibraries, DOMtaskList);
   clearAll(formInputs);
 }
@@ -67,12 +66,5 @@ hobbiesLink.addEventListener("click", () => {
 })
 
 function displayProject(projectLibrary) {
-  // clearAll(formInputs);
   displayList(projectLibrary, projectLibrary.taskArray, DOMtaskList);
 }
-
-// function displayAllProjects() {
-//   displayProject(workLibrary);
-//   displayProject(shoppingLibrary);
-//   displayProject(hobbieLibrary);
-// }

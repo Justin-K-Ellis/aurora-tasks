@@ -73,6 +73,7 @@ header {
 
 #side-bar-list li {
   padding: 0.5em;
+  border: 1px solid transparent;
 }
 
 #side-bar-list li:hover {
